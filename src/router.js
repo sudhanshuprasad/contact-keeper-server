@@ -4,7 +4,7 @@ const isLoggedIn = require('./middleware/isLoggedIn');
 const createContact = require('./routes/createContact');
 const readContact = require('./routes/readContact');
 const updateContact = require('./routes/updateContact');
-const deleteContact = require('./routes/updateContact');
+const deleteContact = require('./routes/deleteContact');
 
 const router = express.Router();
 
