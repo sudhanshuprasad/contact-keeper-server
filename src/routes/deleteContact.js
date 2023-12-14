@@ -7,5 +7,5 @@ module.exports = async (req, res) => {
         return res.status(404).send({message: 'Contact not found'});
     }
     await contact?.deleteOne();
-    res.status(204).json(contact);
+    return res.status(204).send({message: 'Contact deleted', contact: contact});
 }
