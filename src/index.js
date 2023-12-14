@@ -11,7 +11,15 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+
+app.use(cors({
+    allowedHeaders: '*',
+    origin: ["http://localhost:3000", "http://localhost:8080", "*"],
+    // methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
+    credentials: true,
+    // 'Access-Control-Allow-Origin': '*',
+}));
+
 app.use(morgan('tiny'));
 
 app.use(router);

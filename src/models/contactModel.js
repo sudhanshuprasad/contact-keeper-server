@@ -9,7 +9,7 @@ const ContactSchema = new mongoose.Schema({
     },
     PhNumber:{
         type: Number,
-        required: true,
+        // required: true,
     }
 });
 
